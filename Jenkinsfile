@@ -33,12 +33,6 @@ pipeline {
                     npm test
                 '''
             }
-            post {
-                always {
-                    junit 'jest-results/junit.xml'
-                }
-            }
-
         }
 
         stage('Deploy') {
